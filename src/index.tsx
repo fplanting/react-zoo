@@ -7,6 +7,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Home } from './components/Home';
 import { Details } from './components/Details';
 import { NotFound } from './components/NotFound';
+import { Animals } from './components/Animals';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -14,6 +15,7 @@ ReactDOM.render(
     <Routes>
       <Route path="/" element={<App />} />
       <Route path="/Home" element={<Home />} />
+      <Route path="/Animals" element={<Animals />} />
       <Route path="/Details" element={<Details />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
