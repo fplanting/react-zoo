@@ -5,14 +5,13 @@ import { Link, Route, Routes } from 'react-router-dom';
 import { NotFound } from './components/NotFound';
 import AnimalList from './components/AnimalList';
 import { Animal } from './components/Animal';
+import Zoo from './Zoo.png';
 
 const App: React.FC = () => {
   return (
     <body>
-      <header className='header'>zoo</header>
-      <Link to={"/Home"}>Home</Link>
-      <Link to={"/Animals"}>Animals</Link>
-      <Link to={"/Animal"}>Animal</Link>
+      <header className='header'>
+        <img src={Zoo}></img></header>
     
 <div>
     <Routes>

@@ -20,18 +20,22 @@ export const Animals: React.FC = () => {
         });
     };
 
-    return (
+    return ( 
+        <div>
+                   <h1>Våra djur</h1>
         <div className="wrapper">
         <ul>
         {animals &&
         animals.map ((animal) => (
             <li key={animal.id}>
-                <h1 className="animalName">{animal.name}</h1>
+                <h2 className="animalName">{animal.name}</h2>
                 <img className="img" src={animal.imageUrl}></img>
                 <p className="description">{animal.shortDescription}</p>
+                <button>Läs mer om {animal.name}</button>
                 </li>
         ))}
         </ul>
+        </div>
         </div>
     )
 }

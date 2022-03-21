@@ -1,9 +1,13 @@
 body {
-  background-color: #e4decd;
+  background-color: #fff;
 }
 .header {
-  background-color: #bdb4a2;
+  margin-left: 28%;
+  background-color: #fff;
   font-size: 5rem;
   width: 100%;
-  height: 20%;
+}
+
+img {
+  width: 600px;
 }
