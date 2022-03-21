@@ -1,4 +1,4 @@
-export interface IAnimal {
+export default interface IAnimal {
     id: number;
     name: string;
     yearOfBirth: number;
@@ -6,6 +6,6 @@ export interface IAnimal {
     longDescription: string;
     imageUrl: string;
     medicine: string;
-    isFed: boolean;
+    isFed: false;
     lastFed: string;
 }

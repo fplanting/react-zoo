@@ -1,5 +1,7 @@
 import http from "../http"
-import { IAnimal } from "../models/IAnimal"
+import IAnimal from "../models/IAnimal";
+
+
 
 const getAnimal = () => {
     return http.get<Array<IAnimal>>("/Animals");
