@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.css';
-import { Home } from './components/Home';
-import { Link, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import { NotFound } from './components/NotFound';
 import AnimalList from './components/AnimalList';
 import { Animal } from './components/Animal';
 import Zoo from './Zoo.png';
+import { Layout } from './components/Layout';
 
 const App: React.FC = () => {
   return (
@@ -15,7 +15,7 @@ const App: React.FC = () => {
     
 <div>
     <Routes>
-<Route path="/Home" element={<Home />} />
+<Route path="/" element={<Layout />} />
 <Route path="/Animals" element={<AnimalList />} />
 <Route path="/Animals/:id" element={<Animal />} />
 <Route path="*" element={<NotFound />} />

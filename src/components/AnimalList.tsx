@@ -2,9 +2,12 @@ import { useEffect, useState } from "react"
 import IAnimal from "../models/IAnimal";
 import AnimalService from "../services/AnimalService";
 import './AnimalList.css';
+import { Link } from "react-router-dom";
 
 export const Animals: React.FC = () => {
     const [animals, setAnimals] = useState<Array<IAnimal>>([]);
+    const [currentAnimal, setCurrentAnimal] = useState<IAnimal | null>(null);
+
     useEffect(() => {
         getAnimals();
     }, []);
@@ -18,6 +21,8 @@ export const Animals: React.FC = () => {
         .catch((e: Error) => {
             console.log(e);
         });
+
+
     };
 
     return ( 
@@ -31,7 +36,7 @@ export const Animals: React.FC = () => {
                 <h2 className="animalName">{animal.name}</h2>
                 <img className="img" src={animal.imageUrl}></img>
                 <p className="description">{animal.shortDescription}</p>
-                <button>Läs mer om {animal.name}</button>
+                <Link to={`/Animals/" + animal.id`}>Läs mer om {animal.name}</Link>
                 </li>
         ))}
         </ul>

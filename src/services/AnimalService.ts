@@ -11,9 +11,14 @@ const getId = (id: any) => {
     return http.get<IAnimal>(`/Animals/${id}`);
 };
 
+const updateAnimal = (id: any, data: IAnimal) => {
+    return http.put<any>(`/Animals/${id}`);
+}
+
 const AnimalService = {
     getAnimal,
-    getId
+    getId,
+    updateAnimal
 };
 
 export default AnimalService;
