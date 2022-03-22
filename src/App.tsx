@@ -9,7 +9,7 @@ import { Layout } from './components/Layout';
 
 const App: React.FC = () => {
   return (
-    <body>
+    <div className='wrapper'>
       <header className='header'>
         <img src={Zoo}></img></header>
     
@@ -21,7 +21,7 @@ const App: React.FC = () => {
 <Route path="*" element={<NotFound />} />
 </Routes>
 </div>
-</body>
+</div>
   )
 }
 

@@ -3,19 +3,22 @@ import IAnimal from "../models/IAnimal";
 import AnimalService from "../services/AnimalService";
 import './AnimalList.css';
 import { Link } from "react-router-dom";
+import { Animal } from "../models/Animal";
 
 export const Animals: React.FC = () => {
     const [animals, setAnimals] = useState<Array<IAnimal>>([]);
-    const [currentAnimal, setCurrentAnimal] = useState<IAnimal | null>(null);
 
     useEffect(() => {
         getAnimals();
     }, []);
 
-    const getAnimals = () => {
+    const getAnimals = async () => {
         AnimalService.getAnimal()
         .then((response: any) => {
-            setAnimals(response.data);
+            let animalsFromApi = response.data.map((animal: IAnimal) => {
+                return new Animal(animal);
+            })
+            setAnimals(animalsFromApi);
             console.log(response.data);
         })
         .catch((e: Error) => {
@@ -36,7 +39,9 @@ export const Animals: React.FC = () => {
                 <h2 className="animalName">{animal.name}</h2>
                 <img className="img" src={animal.imageUrl}></img>
                 <p className="description">{animal.shortDescription}</p>
-                <Link to={`/Animals/" + animal.id`}>Läs mer om {animal.name}</Link>
+                <button><Link to={`/Animals/${animal.id}`}>{animal.name}</Link></button>
+                <p>{animal.lastFed}</p>
+                <p>{animal.id}</p>
                 </li>
         ))}
         </ul>

@@ -6,6 +6,6 @@ export default interface IAnimal {
     longDescription: string;
     imageUrl: string;
     medicine: string;
-    isFed: false;
+    isFed: boolean;
     lastFed: string;
 }

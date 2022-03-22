@@ -2,50 +2,40 @@ import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom"
 import AnimalService from "../services/AnimalService";
 import IAnimal from "../models/IAnimal";
+import { Animal as AnimalModel } from "../models/Animal";
 
 
-export const Animal: React.FC = () => {
-    const { id } = useParams();
-    let navigate = useNavigate();
-    const initialAnimal = {
-        id: null,
-        name: "",
-        yearOfBirth: null,
-        shortDescription: "",
-        longDescription: "",
-        imageUrl: "",
-        medicine: "",
-        isFed: false,
-        lastFed: ""
-    };
-    
-    const [currentAnimal, setCurrentAnimal] = useState(0);
-    
+export const Animal = () => {
+    const [animal, setAnimal] = useState<IAnimal>();
     let params = useParams();
 
     const getAnimal = (id: string) => {
         AnimalService.getId(id)
-        .then((response: any) => {
-            setCurrentAnimal(response.data);
-            console.log(response.data);
-        })
-        .catch((e: Error) => {
-            console.log(e);
-        });
+            .then((response: any) => {
+                let animalFromAPI = new AnimalModel(response.data);
+           setAnimal(animalFromAPI);
+           console.log(response.data);
+       })
+       .catch((e: Error) => {
+           console.log(e);
+       });
     };
 
     useEffect(() => {
-        if (params.id)
-        setCurrentAnimal(+params.id);
-    }, []);
-
-    useEffect(() => {
-        if (currentAnimal === 0) return;
-    }, [currentAnimal]);
+        if (params.id) {
+            getAnimal(params.id);
+        }
+    }, [animal]);
 
     return (
-        <div>{currentAnimal}</div>
+        <div>
+            <h1>{animal?.name}</h1>
+            <h2>{animal?.isFed ? "Matad" : "Ej matad"}</h2><br />
+            <h3>{animal?.lastFed}</h3>
+            <button onClick={() => {
+                AnimalService.setLS(animal);
+            }} disabled={animal?.isFed}>Mata</button>
+
+            </div>
     );
 }
-
-export default Animal;
