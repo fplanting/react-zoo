@@ -39,9 +39,7 @@ export const Animals: React.FC = () => {
                 <h2 className="animalName">{animal.name}</h2>
                 <img className="img" src={animal.imageUrl}></img>
                 <p className="description">{animal.shortDescription}</p>
-                <button><Link to={`/Animals/${animal.id}`}>{animal.name}</Link></button>
-                <p>{animal.lastFed}</p>
-                <p>{animal.id}</p>
+                <button><Link to={`/Animals/${animal.id}`}>Läs mer om {animal.name}</Link></button>
                 </li>
         ))}
         </ul>

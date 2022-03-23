@@ -4,11 +4,20 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Layout } from './components/Layout';
+import AnimalList from './components/AnimalList';
+import { DisplayAnimal } from './components/DisplayAnimal';
+import { NotFound } from './components/NotFound';
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-    <App />
+    <Routes>
+<Route path="/" element={<Layout />} />
+<Route path="/Animals" element={<AnimalList />} />
+<Route path="/Animals/:id" element={<DisplayAnimal />} />
+<Route path="*" element={<NotFound />} />
+</Routes>
     </BrowserRouter>
 
   </React.StrictMode>,

@@ -7,7 +7,7 @@ const getAnimal = () => {
     return http.get<Array<IAnimal>>("/Animals");
 };
 
-const getId = (id: any) => { // change name
+const getAnimalId = (id: any) => { // change name
     return http.get<IAnimal>(`/Animals/${id}`);
 };
 
@@ -28,15 +28,15 @@ const getLS = () => {
 const setLS = (animal: IAnimal | undefined) => {
     if (!animal) return;
     let animals = getLS();
-    animals[animal.id] = "2022-03-22 19:37"; // change to date
-    animal.lastFed = "2022-03-22 19:37";
+    animals[animal.id] = new Date();
+    animal.lastFed = "";
 
     localStorage.setItem('animals', JSON.stringify(animals));
 }
 
 const AnimalService = {
     getAnimal,
-    getId,
+    getAnimalId,
     getLS,
     setLS,
 };
