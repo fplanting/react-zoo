@@ -1,45 +1,85 @@
 .animalWrapper {
   width: 450px;
   margin-left: 40px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .name {
-  border-bottom: 2px solid #9e8c6c;
+  color: #99773b;
+  border-bottom: 1px solid #000;
   width: 550px;
   margin-left: 20px;
+  font-family: "Oswald", sans-serif;
+  font-size: 1.5rem;
 }
 
 .image {
   width: 510px;
 }
 
-.born {
-}
-
-.animalBorn {
+.wrapperInfo {
+  margin-left: 30px;
+  margin-bottom: 40px;
 }
 
 .description {
+  font-size: 1rem;
+  color: #99773b;
+  width: 150px;
+  font-family: "Oswald", sans-serif;
+}
+
+.animalBorn,
+.animalMedicine {
+  font-size: 0.8rem;
+  font-family: "Karla", sans-serif;
 }
 
 .animalDescriptionLong {
+  font-size: 0.8rem;
+  font-family: "Oswald", sans-serif;
+  line-height: 1.5;
 }
 
-.medicine {
-}
-
-.animalMedicine {
+.wrapperFed {
+  background-color: #c5b69a;
+  padding-top: 2px;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+  margin-left: 50px;
+  text-align: center;
 }
 
 .fed {
+  margin-top: 20px;
+  font-size: 1rem;
+  color: #754d09;
+  border-bottom: solid 1px #754d09;
+  font-family: "Karla", sans-serif;
 }
 
 .animalFed {
+  font-weight: bold;
+  font-family: "Karla", sans-serif;
 }
 
 .lastFed {
+  font-size: 1rem;
+  color: #754d09;
+  border-bottom: solid 1px #754d09;
+  font-family: "Karla", sans-serif;
 }
 
 .animalLastFed {
+  font-size: 0.9rem;
+  font-family: "Karla", sans-serif;
+}
+
+.link {
+  text-decoration: none;
+  border-bottom: solid 1px #000;
+  color: #000;
+  text-transform: uppercase;
+  font-family: "Karla", sans-serif;
+  font-size: 0.6rem;
 }

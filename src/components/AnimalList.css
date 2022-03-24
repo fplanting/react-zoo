@@ -1,21 +1,31 @@
 .animals {
-  border-bottom: 2px solid #9e8c6c;
+  color: #99773b;
+  border-bottom: 1px solid #000;
   width: 550px;
   margin-left: 20px;
+  font-family: "Oswald", sans-serif;
+  font-size: 1.5rem;
 }
 
 .wrapper {
   width: 450px;
-  margin-left: 40px;
+  margin-left: 55px;
 }
 ul {
   list-style-type: none;
 }
 
+li {
+  border-bottom: 1px solid #99773b;
+  margin-bottom: 30px;
+}
+
 .animalName {
   font-size: 1rem;
-  border-bottom: 1px solid #9e8c6c;
+  color: #99773b;
+
   width: 400px;
+  font-family: "Oswald", sans-serif;
 }
 
 .animalImg {
@@ -24,4 +34,10 @@ ul {
 
 .animalDescriptionShort {
   font-size: 0.8rem;
+  font-family: "Karla", sans-serif;
+  line-height: 1.5;
+}
+
+button {
+  margin-bottom: 20px;
 }
