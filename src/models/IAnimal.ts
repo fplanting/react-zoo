@@ -1,3 +1,5 @@
+import dayjs from 'dayjs';
+
 export default interface IAnimal {
     id: number;
     name: string;
@@ -7,5 +9,5 @@ export default interface IAnimal {
     imageUrl: string;
     medicine: string;
     isFed: boolean;
-    lastFed: string;
+    lastFed: dayjs.Dayjs;
 }

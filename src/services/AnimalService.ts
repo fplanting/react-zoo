@@ -18,6 +18,8 @@ const getLS = () => {
     // {
     //    1: 2022-03-22 19:34
     // }
+
+    // get value from LS and parse it
     let animalString = localStorage.getItem('animals');
     if (animalString) {
         return JSON.parse(animalString)
@@ -25,11 +27,11 @@ const getLS = () => {
     return {};
 }
 
+// lastFed in Ls
 const setLS = (animal: IAnimal | undefined) => {
     if (!animal) return;
     let animals = getLS();
     animals[animal.id] = new Date();
-    animal.lastFed = "";
 
     localStorage.setItem('animals', JSON.stringify(animals));
 }
