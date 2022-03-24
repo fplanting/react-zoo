@@ -1,0 +1,45 @@
+.animalWrapper {
+  width: 450px;
+  margin-left: 40px;
+  margin-bottom: 20px;
+}
+
+.name {
+  border-bottom: 2px solid #9e8c6c;
+  width: 550px;
+  margin-left: 20px;
+}
+
+.image {
+  width: 510px;
+}
+
+.born {
+}
+
+.animalBorn {
+}
+
+.description {
+}
+
+.animalDescriptionLong {
+}
+
+.medicine {
+}
+
+.animalMedicine {
+}
+
+.fed {
+}
+
+.animalFed {
+}
+
+.lastFed {
+}
+
+.animalLastFed {
+}

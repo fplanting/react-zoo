@@ -13,10 +13,11 @@ ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
     <Routes>
-<Route path="/" element={<Layout />} />
-<Route path="/Animals" element={<AnimalList />} />
+<Route path="/" element={<Layout />}>
+<Route index element={<AnimalList />} />
 <Route path="/Animals/:id" element={<DisplayAnimal />} />
 <Route path="*" element={<NotFound />} />
+</Route>
 </Routes>
     </BrowserRouter>
 

@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { Animal } from "../models/Animal";
 import IAnimal from "../models/IAnimal";
 import AnimalService from "../services/AnimalService";
+import './DisplayAnimal.css';
 
 
 export const DisplayAnimal = () => {
@@ -29,21 +30,24 @@ export const DisplayAnimal = () => {
 
     return (
         <div>
-            <h1>{animal?.name}</h1>
-            <img className="img" src={animal?.imageUrl}></img>
-            <p className="description">Född: {animal?.yearOfBirth}</p>
-            <p>Beskriving:</p>
-            <p className="description">{animal?.longDescription}</p>
-            <p>Medicin:</p>
-            <p className="description">{animal?.medicine}</p>
-            <p>Matad/ej matad:</p>
-            <h2>{animal?.isFed ? "Matad" : "Ej matad"}</h2>
-            <p>Senast matad:</p>
-            <h3>{animal?.lastFed}</h3>
-            <button onClick={() => {
-                AnimalService.setLS(animal);
-            }} disabled={animal?.isFed}>Mata djuret</button>
+            <h1 className="name">{animal?.name}</h1>
+                <div className="animalWrapper">
+                    <img className="image" src={animal?.imageUrl}></img>
+                    <h2 className="born">Född:</h2>
+                    <p className="animalBorn">{animal?.yearOfBirth}</p>
+                    <h2 className="description">Beskriving:</h2>
+                    <p className="animalDescriptionLong">{animal?.longDescription}</p>
+                    <h2 className="medicine">Medicin:</h2>
+                    <p className="animalMedicine">{animal?.medicine}</p>
+                    <h2 className="fed">Matad/ej matad:</h2>
+                    <p className="animalFed">{animal?.isFed ? "Matad" : "Ej matad"}</p>
+                    <h2 className="lastFed">Senast matad:</h2>
+                    <p className="animalLastFed">{animal?.lastFed}</p>
+                    <button onClick={() => {
+                         AnimalService.setLS(animal);
+                        }} disabled={animal?.isFed}>Mata djuret</button>
 
             </div>
+        </div>
     );
 }

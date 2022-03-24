@@ -1,32 +1,27 @@
-.wrapper {
-  width: 600px;
-  height: 100%;
-  margin-left: 27%;
-  padding: 20px;
-  background-color: #e0dace;
-  margin-bottom: 20px;
+.animals {
+  border-bottom: 2px solid #9e8c6c;
+  width: 550px;
+  margin-left: 20px;
 }
 
-h1 {
-  margin-left: 45%;
-  border-bottom: solid 1px #a7918b;
-  width: 150px;
+.wrapper {
+  width: 450px;
+  margin-left: 40px;
 }
 ul {
   list-style-type: none;
 }
-.img {
-  width: 40%;
-  height: 40%;
-}
 
 .animalName {
-  border-bottom: solid 1px #a7918b;
-  width: 250px;
-  padding: 10px;
   font-size: 1rem;
+  border-bottom: 1px solid #9e8c6c;
+  width: 400px;
 }
 
-.description {
+.animalImg {
+  width: 400px;
+}
+
+.animalDescriptionShort {
   font-size: 0.8rem;
 }
