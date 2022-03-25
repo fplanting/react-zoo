@@ -1,7 +1,7 @@
 header {
   display: flex;
   flex-direction: column;
-  margin-left: 26%;
+  margin-left: 22%;
 }
 
 img {
@@ -11,7 +11,7 @@ img {
 main {
   display: flex;
   flex-direction: column;
-  margin-left: 30%;
+  margin-left: 25%;
   background-color: #ebe5de;
   width: 600px;
   margin-top: 40px;

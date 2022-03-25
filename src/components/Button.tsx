@@ -11,7 +11,7 @@ export const Button = styled.button`
     border: none;
   outline: none;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-
+  
   :hover {
       background-color: #b8a076;
   }

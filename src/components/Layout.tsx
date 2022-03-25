@@ -5,15 +5,15 @@ import './Layout.css';
 export const Layout = () => {
     return (
         <div>
-    <header>
-        <div className="headerImg">
-            <img src={Zoo} />
-            </div>
-    </header> 
+            <header>
+                <div className="headerImg">
+                    <img src={Zoo} />
+                </div>
+            </header>
 
-    <main>
-        <Outlet></Outlet>
-    </main>
-    </div>
+            <main>
+                <Outlet></Outlet>
+            </main>
+        </div>
     );
 };
