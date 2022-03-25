@@ -4,6 +4,7 @@ import AnimalService from "../services/AnimalService";
 import { Link } from "react-router-dom";
 import { Animal } from "../models/Animal";
 import './AnimalList.css';
+import { Button } from "./Button";
 
 export const Animals: React.FC = () => {
     const [animals, setAnimals] = useState<Array<IAnimal>>([]);
@@ -40,7 +41,7 @@ export const Animals: React.FC = () => {
                                 <h2 className="animalName">{animal.name}</h2>
                                 <img className="animalImg" src={animal.imageUrl}></img>
                                 <p className="animalDescriptionShort">{animal.shortDescription}</p>
-                                <button><Link to={`/Animals/${animal.id}`}>Läs mer om {animal.name}</Link></button>
+                                <Button><Link className="linkToAnimal" to={`/Animals/${animal.id}`}>Läs mer om {animal.name}</Link></Button>
                             </li>
                         ))}
                 </ul>

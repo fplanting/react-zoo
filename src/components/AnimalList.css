@@ -38,6 +38,9 @@ li {
   line-height: 1.5;
 }
 
-button {
-  margin-bottom: 20px;
+.linkToAnimal {
+  text-decoration: none;
+  color: #000;
+  font-family: "Karla", sans-serif;
+  font-size: 0.8rem;
 }

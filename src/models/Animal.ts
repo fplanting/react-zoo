@@ -2,6 +2,8 @@ import AnimalService from "../services/AnimalService";
 import IAnimal from "./IAnimal";
 import dayjs from 'dayjs';
 
+// us ing dayjs to make lastFed to a object, easier to change date, format, calculate
+
 export class Animal implements IAnimal {  
     public id: number = 0;
     public name: string = "";
